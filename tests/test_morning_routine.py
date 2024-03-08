@@ -20,11 +20,27 @@ def test_do_exercise_at_start_of_range():
 
 
 def test_do_exercise_at_end_of_range():
-    morning_routine = MorningRoutine(time(6, 59, 59))
+    morning_routine = MorningRoutine(time(6, 44, 59))
 
     result = morning_routine.what_should_i_do_now()
 
     assert result == "Do exercise"
+
+
+def test_take_a_shower_at_start_of_range():
+    morning_routine = MorningRoutine(time(6, 45))
+
+    result = morning_routine.what_should_i_do_now()
+
+    assert result == "Take a shower"
+
+
+def test_take_a_shower_at_end_of_range():
+    morning_routine = MorningRoutine(time(6, 59, 59))
+
+    result = morning_routine.what_should_i_do_now()
+
+    assert result == "Take a shower"
 
 
 def test_read_at_start_of_range():
