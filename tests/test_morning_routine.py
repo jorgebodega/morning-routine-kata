@@ -4,7 +4,7 @@ from src.morning_routine import MorningRoutine
 
 
 def test_do_nothing_before_start_routine():
-    morning_routine = MorningRoutine(time(5, 59, 59))
+    morning_routine = MorningRoutine.create_with_my_activities(time(5, 59, 59))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -12,7 +12,7 @@ def test_do_nothing_before_start_routine():
 
 
 def test_do_exercise_at_start_of_range():
-    morning_routine = MorningRoutine(time(6))
+    morning_routine = MorningRoutine.create_with_my_activities(time(6))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -20,7 +20,7 @@ def test_do_exercise_at_start_of_range():
 
 
 def test_do_exercise_at_end_of_range():
-    morning_routine = MorningRoutine(time(6, 44, 59))
+    morning_routine = MorningRoutine.create_with_my_activities(time(6, 44, 59))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -28,7 +28,7 @@ def test_do_exercise_at_end_of_range():
 
 
 def test_take_a_shower_at_start_of_range():
-    morning_routine = MorningRoutine(time(6, 45))
+    morning_routine = MorningRoutine.create_with_my_activities(time(6, 45))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -36,7 +36,7 @@ def test_take_a_shower_at_start_of_range():
 
 
 def test_take_a_shower_at_end_of_range():
-    morning_routine = MorningRoutine(time(6, 59, 59))
+    morning_routine = MorningRoutine.create_with_my_activities(time(6, 59, 59))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -44,7 +44,7 @@ def test_take_a_shower_at_end_of_range():
 
 
 def test_read_at_start_of_range():
-    morning_routine = MorningRoutine(time(7))
+    morning_routine = MorningRoutine.create_with_my_activities(time(7))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -52,7 +52,7 @@ def test_read_at_start_of_range():
 
 
 def test_read_at_end_of_range():
-    morning_routine = MorningRoutine(time(7, 29, 59))
+    morning_routine = MorningRoutine.create_with_my_activities(time(7, 29, 59))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -60,7 +60,7 @@ def test_read_at_end_of_range():
 
 
 def test_study_at_start_of_range():
-    morning_routine = MorningRoutine(time(7, 30))
+    morning_routine = MorningRoutine.create_with_my_activities(time(7, 30))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -68,7 +68,7 @@ def test_study_at_start_of_range():
 
 
 def test_study_at_end_of_range():
-    morning_routine = MorningRoutine(time(7, 59, 59))
+    morning_routine = MorningRoutine.create_with_my_activities(time(7, 59, 59))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -76,7 +76,7 @@ def test_study_at_end_of_range():
 
 
 def test_have_breakfast_at_start_of_range():
-    morning_routine = MorningRoutine(time(8))
+    morning_routine = MorningRoutine.create_with_my_activities(time(8))
 
     result = morning_routine.what_should_i_do_now()
 
@@ -84,7 +84,7 @@ def test_have_breakfast_at_start_of_range():
 
 
 def test_have_breakfast_at_end_of_range():
-    morning_routine = MorningRoutine(time(8, 59, 59))
+    morning_routine = MorningRoutine.create_with_my_activities(time(8, 59, 59))
 
     result = morning_routine.what_should_i_do_now()
 
