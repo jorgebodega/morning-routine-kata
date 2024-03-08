@@ -1,0 +1,62 @@
+# Same as Black
+line-length = 100
+
+# Assume Python 3.12
+target-version = "py312"
+
+[lint]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = [
+    # "A",
+    # "ANN",
+    # "ARG",
+    "ASYNC",
+    # "B",
+    # "BLE",
+    # "C4",
+    "C90",
+    # "COM",
+    # "DTZ",
+    "E",
+    # "EM",
+    # "ERA",
+    "F",
+    "FA",
+    # "FBT",
+    "G",
+    "I",
+    "ICN",
+    # "INP",
+    # "N",
+    "PD",
+    # "PERF",
+    "PIE",
+    # "PL",
+    # "PT",
+    "PYI",
+    "Q",
+    "RET",
+    "RSE",
+    # "RUF",
+    # "S",
+    "SIM",
+    "SLF",
+    "SLOT",
+    "T20",
+    "TCH",
+    "TID",
+    # "TRY",
+    "UP",
+    "W",
+    "YTT",
+]
+
+# Skip unused variable rules due to ruff formatter.
+ignore = ["E501", "W191"]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided
+fixable = ["ALL"]
+
+[lint.mccabe]
+# Unlike Flake8, default to a complexity level of 10
+max-complexity = 30 # TODO: Lower this complexity to the previous level

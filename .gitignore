@@ -1,2 +1,18 @@
-venv/
-.pytest_cache/
+# Python cache
+__pycache__
+
+# Pytest related files
+.pytest_cache
+
+# Poetry
+.venv
+
+# Ruff
+.ruff_cache
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+.idea
