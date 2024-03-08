@@ -10,5 +10,7 @@ class MorningRoutine:
             return "Do exercise"
         if time(7) <= self.now < time(8):
             return "Read and study"
+        if time(8) <= self.now < time(9):
+            return "Have breakfast"
 
-        return ""
+        return "No activity"
