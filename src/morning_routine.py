@@ -1,16 +1,20 @@
-from datetime import time
+from datetime import datetime, time
 
 
 class MorningRoutine:
-    def __init__(self, now: time) -> None:
+    def __init__(self, now: time = datetime.now().time()) -> None:
         self.now = now
 
     def what_should_i_do_now(self) -> str:
-        if time(6) <= self.now < time(7):
-            return "Do exercise"
-        if time(7) <= self.now < time(8):
-            return "Read and study"
-        if time(8) <= self.now < time(9):
-            return "Have breakfast"
+        activities = {
+            (time(6), time(7)): "Do exercise",
+            (time(7), time(8)): "Read and study",
+            (time(8), time(9)): "Have breakfast",
+        }
+
+        for hour_range, activity in activities.items():
+            start, end = hour_range
+            if start <= self.now < end:
+                return activity
 
         return "No activity"
